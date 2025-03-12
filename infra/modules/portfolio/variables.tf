@@ -12,3 +12,4 @@ variable "provider_name" {
   description = "Provider name for the Service Catalog portfolio"
   type        = string
 }
+
