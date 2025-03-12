@@ -125,8 +125,4 @@ output "role_arn" {
   value = aws_iam_role.service_catalog_role.arn
 }
 
-output "policy_arn" {
-  description = "IAM policy ARN for the Service Catalog user"
-  value       = aws_iam_policy.service_catalog_user_policy.arn
-}
 
