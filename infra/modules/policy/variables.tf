@@ -12,3 +12,4 @@ variable "user_name" {
   description = "Name of the IAM user to attach the policy to"
   type        = string
 }
+
