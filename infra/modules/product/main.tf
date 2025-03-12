@@ -21,10 +21,11 @@ resource "aws_servicecatalog_product_portfolio_association" "example" {
   product_id   = aws_servicecatalog_product.example.id
 }
 
-resource "aws_servicecatalog_launch_constraint" "example" {
+resource "aws_servicecatalog_constraint" "example" {
   portfolio_id = var.portfolio_id
   product_id   = aws_servicecatalog_product.example.id
   role_arn     = var.role_arn
+  type         = "LAUNCH"
   description  = "Launch constraint for example product"
 }
 
