@@ -7,7 +7,7 @@ resource "aws_servicecatalog_product" "example" {
   support_description = var.support_description
   type         = "EXTERNAL"
 
-  provisioning_artifact {
+  provisioning_artifact_parameters {
     name         = var.artifact_name
     description  = var.artifact_description
     type         = "EXTERNAL"
