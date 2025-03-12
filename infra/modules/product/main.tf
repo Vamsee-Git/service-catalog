@@ -24,9 +24,11 @@ resource "aws_servicecatalog_product_portfolio_association" "example" {
 resource "aws_servicecatalog_constraint" "example" {
   portfolio_id = var.portfolio_id
   product_id   = aws_servicecatalog_product.example.id
-  role_arn     = var.role_arn
   type         = "LAUNCH"
   description  = "Launch constraint for example product"
+  parameters   = jsonencode({
+    RoleArn = var.role_arn
+  })
 }
 
 output "product_id" {
