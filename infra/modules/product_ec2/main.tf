@@ -12,7 +12,7 @@ resource "aws_servicecatalog_product" "example" {
     name           = "v1"
     description    = "version v1"
     type           = "CLOUD_FORMATION_TEMPLATE"  # Change to CloudFormation template type
-    template_url   = "https://s3.amazonaws.com/sneha-terraform-bucket-us-west-2/simple_ec2_ebs_appregistry.yaml"
+    template_url   = "s3://s3-terraformtemplate-bucketdfghghj/simple_ec2_ebs_appregistry.yaml"
   }
 }
 resource "aws_servicecatalog_product_portfolio_association" "example" {
@@ -20,12 +20,3 @@ resource "aws_servicecatalog_product_portfolio_association" "example" {
   product_id   = aws_servicecatalog_product.example.id
 }
 
-resource "aws_servicecatalog_constraint" "example" {
-  portfolio_id = var.portfolio_id
-  product_id   = aws_servicecatalog_product.example.id
-  type         = "LAUNCH"
-  description  = "Launch constraint for example product"
-  parameters   = jsonencode({
-    RoleArn = var.role_arn
-  })
-}
