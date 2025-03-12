@@ -7,21 +7,21 @@ module "portfolio" {
 
 module "product" {
   source            = "./modules/product"
-  name              = "ExampleProduct"
-  owner             = "ExampleOwner"
+  name              = "S3-BucketProduct"
+  owner             = "IT"
   description       = "A product created using a Terraform template"
   distributor       = "ExampleDistributor"
   support_email     = "support@example.com"
   support_description = "Support for this product"
   artifact_name     = "TerraformArtifact"
   artifact_description = "Terraform template for provisioning resources"
-  template_url      = "https://s3.amazonaws.com/path-to-your-terraform-template/terraform-template.json"
+  template_url      = "https://s3-terraformtemplate-bucketdfghghj.s3.ap-south-1.amazonaws.com/s3bucket.tar.gz"
   portfolio_id      = module.portfolio.portfolio_id
 }
 
 module "user" {
   source        = "./modules/user"
-  user_name     = "example-user"
+  user_name     = "Terraform_user"
   portfolio_id  = module.portfolio.portfolio_id
 }
 
