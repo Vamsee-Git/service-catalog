@@ -15,3 +15,7 @@ resource "aws_servicecatalog_product" "example" {
     template_url   = "https://s3-terraformtemplate-bucketdfghghj.s3.ap-south-1.amazonaws.com/Network.yaml"
   }
 }
+resource "aws_servicecatalog_product_portfolio_association" "example" {
+  portfolio_id = var.portfolio_id
+  product_id   = aws_servicecatalog_product.example.id
+}
