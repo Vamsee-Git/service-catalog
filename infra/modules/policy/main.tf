@@ -20,3 +20,9 @@ resource "aws_iam_user_policy_attachment" "example" {
   user       = var.user_name
   policy_arn = aws_iam_policy.service_catalog_user_policy.arn
 }
+
+output "policy_arn" {
+  description = "IAM policy ARN for the Service Catalog user"
+  value       = aws_iam_policy.service_catalog_user_policy.arn
+}
+
