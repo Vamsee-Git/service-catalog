@@ -12,7 +12,7 @@ resource "aws_servicecatalog_product" "example" {
     name           = "v1"
     description    = "version v1"
     type           = "CLOUD_FORMATION_TEMPLATE"  # Change to CloudFormation template type
-    template_url   = "s3://s3-terraformtemplate-bucketdfghghj/simple_ec2_ebs_appregistry.yaml"
+    template_url   = "https://s3-terraformtemplate-bucketdfghghj.s3.ap-south-1.amazonaws.com/simple_ec2_ebs_appregistry.yaml"
   }
 }
 resource "aws_servicecatalog_product_portfolio_association" "example" {
