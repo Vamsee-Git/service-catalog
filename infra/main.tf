@@ -1,13 +1,13 @@
 module "portfolio" {
   source        = "./modules/portfolio"
-  name          = "ExamplePortfolio"
+  name          = var.portfolio_name
   description   = "A portfolio for managing products"
   provider_name = "ExampleProvider"
 }
 
 module "product" {
   source            = "./modules/product"
-  name              = "S3-BucketProduct"
+  name              = var.product_name
   owner             = "IT"
   description       = "A product created using a Terraform template"
   distributor       = "ExampleDistributor"
