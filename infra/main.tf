@@ -26,6 +26,12 @@ module "product_ec2" {
   role_arn          = module.policy.role_arn
 }
 
+module "product_vpc" {
+  source = "./modules/product_vpc"
+  portfolio_id      = module.portfolio.portfolio_id
+  role_arn          = module.policy.role_arn
+}
+
 module "user" {
   source        = "./modules/user"
   user_name     = "Infra_user"
