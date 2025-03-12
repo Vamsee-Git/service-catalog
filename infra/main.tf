@@ -21,7 +21,7 @@ module "product" {
 
 module "user" {
   source        = "./modules/user"
-  user_name     = "Terraform_user"
+  user_name     = "Infra_user"
   portfolio_id  = module.portfolio.portfolio_id
 }
 
