@@ -5,6 +5,7 @@ resource "aws_servicecatalog_product" "example" {
   distributor   = var.distributor
   support_email = var.support_email
   support_description = var.support_description
+  type         = "EXTERNAL"
 
   provisioning_artifact {
     name         = var.artifact_name
