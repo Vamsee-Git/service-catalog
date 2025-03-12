@@ -15,3 +15,9 @@ resource "aws_servicecatalog_product" "example" {
 
   portfolio_id = var.portfolio_id
 }
+
+output "product_id" {
+  description = "The ID of the Service Catalog product"
+  value       = aws_servicecatalog_product.example.id
+}
+
