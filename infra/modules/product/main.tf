@@ -11,6 +11,7 @@ resource "aws_servicecatalog_product" "example" {
     description  = var.artifact_description
     type         = "EXTERNAL"
     template_url = var.template_url
+    disable_template_validation  = true
   }
 
   portfolio_id = var.portfolio_id
