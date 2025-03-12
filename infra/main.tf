@@ -20,6 +20,10 @@ module "product" {
   role_arn          = module.policy.role_arn
 }
 
+module "product_ec2" {
+  source = "./modules/product_ec2"
+}
+
 module "user" {
   source        = "./modules/user"
   user_name     = "Infra_user"
