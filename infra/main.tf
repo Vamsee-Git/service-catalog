@@ -22,6 +22,8 @@ module "product" {
 
 module "product_ec2" {
   source = "./modules/product_ec2"
+  portfolio_id      = module.portfolio.portfolio_id
+  role_arn          = module.policy.role_arn
 }
 
 module "user" {
