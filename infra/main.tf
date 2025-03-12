@@ -16,13 +16,13 @@ module "product" {
   artifact_name     = "TerraformArtifact"
   artifact_description = "Terraform template for provisioning resources"
   template_url      = "https://s3.amazonaws.com/path-to-your-terraform-template/terraform-template.json"
-  portfolio_id      = module.portfolio.id
+  portfolio_id      = module.portfolio.portfolio_id
 }
 
 module "user" {
   source        = "./modules/user"
   user_name     = "example-user"
-  portfolio_id  = module.portfolio.id
+  portfolio_id  = module.portfolio.portfolio_id
 }
 
 module "policy" {
