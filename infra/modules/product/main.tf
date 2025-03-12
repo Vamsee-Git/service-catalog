@@ -14,8 +14,11 @@ resource "aws_servicecatalog_product" "example" {
     template_url = var.template_url
     disable_template_validation  = true
   }
+}
 
+resource "aws_servicecatalog_product_portfolio_association" "example" {
   portfolio_id = var.portfolio_id
+  product_id   = aws_servicecatalog_product.example.id
 }
 
 output "product_id" {
