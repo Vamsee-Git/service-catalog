@@ -9,7 +9,7 @@ resource "aws_servicecatalog_product" "example" {
   provisioning_artifact {
     name         = var.artifact_name
     description  = var.artifact_description
-    type         = "CLOUD_FORMATION_TEMPLATE"
+    type         = "EXTERNAL"
     template_url = var.template_url
   }
 
