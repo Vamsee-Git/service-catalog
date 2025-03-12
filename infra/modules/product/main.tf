@@ -21,6 +21,13 @@ resource "aws_servicecatalog_product_portfolio_association" "example" {
   product_id   = aws_servicecatalog_product.example.id
 }
 
+resource "aws_servicecatalog_launch_constraint" "example" {
+  portfolio_id = var.portfolio_id
+  product_id   = aws_servicecatalog_product.example.id
+  role_arn     = aws_iam_role.example.arn
+  description  = "Launch constraint for example product"
+}
+
 output "product_id" {
   description = "The ID of the Service Catalog product"
   value       = aws_servicecatalog_product.example.id
