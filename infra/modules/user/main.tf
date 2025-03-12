@@ -7,3 +7,13 @@ resource "aws_servicecatalog_principal_portfolio_association" "example" {
   principal_arn = aws_iam_user.example.arn
   principal_type = "IAM"
 }
+
+output "user_name" {
+  description = "IAM user name associated with the portfolio"
+  value       = aws_iam_user.example.name
+}
+
+output "user_arn" {
+  description = "IAM user ARN associated with the portfolio"
+  value       = aws_iam_user.example.arn
+}
